@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Nouvelle notification</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header>
+      Nouvelle notification
+    </ion-card-header>
+
+
+    <ion-list>
+
+      <ion-item >
+        <ion-label floating>Pour</ion-label>
+        <ion-select  multiple="true" [(ngModel)]="pour">
+          <ion-option *ngFor="let person of doub" >{{person.nom}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-input [(ngModel)]="messagenot" type="textarea"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>lien</ion-label>
+        <ion-select  multiple="true" [(ngModel)]="liens">
+          <ion-option *ngFor="let fichier of doub2" >{{fichier.lien}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+    <hr>
+    <div class="middle">
+      <button ion-button icon-right (click)="addNotif(pour,liens,messagenot)">
+        creer
+        <ion-icon ></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

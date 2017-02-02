@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{parameter1}} - Mes transferts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="middle">
+    <button ion-button class="button-large button-positive" (click)="goNewtransfert()">
+      Ajouter
+    </button>
+  </div>
+
+  <ion-card *ngFor="let row of doub">
+    <ion-card-header>
+      {{row.libelle}}
+    </ion-card-header>
+    <ion-list>
+    <div class = "row">
+    <div class = "col col-50">
+
+      <ion-item>
+        {{row.etat}}
+      </ion-item>
+      <ion-item>
+        {{row.date}}
+      </ion-item>
+
+    </div>
+    <div class = "col col-50">
+  <ion-item>
+  <img style="max-width: 90px;" [src]="row.lien" />
+    </ion-item>
+    </div>
+    </div>
+    </ion-list>
+  </ion-card>
+</ion-content>

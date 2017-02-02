@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ztransfert - Administration - Transferts</ion-title>
+    <div class="middle">
+      <button ion-button class="button-large button-positive" (click)="goNewtransfert()">
+        Ajouter
+      </button>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding  >
+
+  <ion-segment [(ngModel)]="relationship" color="primary">
+    <ion-segment-button value="Administrateur" (ionSelect)="selectedFriends()">
+      Administrateur
+    </ion-segment-button>
+    <ion-segment-button value="Utilisateurs" (ionSelect)="selectedEnemies()">
+      Utilisateurs
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card  style="max-width: 900px; margin-left: auto; margin-right: auto; text-align:center" *ngFor="let row of doub" (click)="goTransfertsdeatilsPage(row.libelle,row.date,row.from,row.lien,row.etat)">
+    <ion-card-header>
+      {{row.from}}
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        {{row.libelle}}
+      </ion-item>
+      <ion-item>
+        {{row.date}}
+      </ion-item>
+      <ion-item>
+        <img [src]="row.lien" />
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card ngif="enemy" style="max-width: 900px; margin-left: auto; margin-right: auto; text-align:center" *ngFor="let row of doub" (click)="goTransfertsdeatilsPage(row.libelle,row.date,row.from,row.lien,row.etat)">
+    <ion-card-header>
+      {{row.from}}
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
+<!--
+ -->
+
+

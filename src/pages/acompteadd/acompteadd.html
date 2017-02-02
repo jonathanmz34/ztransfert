@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Nouveau compte</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header>
+      Nouveau compte
+    </ion-card-header>
+
+
+    <ion-list>
+
+      <ion-item >
+        <ion-label floating>Nom utilisateur</ion-label>
+        <ion-input #loginizer [(ngModel)]="nom" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Login</ion-label>
+        <ion-input [(ngModel)]="nomutil" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="pass" type="text"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <hr>
+    <div class="middle">
+      <button ion-button icon-right (click)="addAcces(nom,nomutil,pass)">
+        creer
+        <ion-icon name="new"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

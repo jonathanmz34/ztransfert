@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Notifications</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="middle">
+    <button ion-button class="button-large button-positive" (click)="goNewnotif()">
+      Nouvelle notification
+    </button>
+  </div>
+
+  <ion-card *ngFor="let row of doub">
+    <ion-card-header>
+
+      {{row.libelle}}
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">Transmis a : </ion-label>
+        <ion-input placeholder="{{row.dest}}" disabled="disabled"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Le : </ion-label>
+        <ion-input placeholder="{{row.date}}" disabled="disabled"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Etat : </ion-label>
+        <ion-input placeholder="{{row.etat}}" disabled="disabled"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="row.etat != 'Non consulté'">
+        <ion-label color="primary">Le : </ion-label>
+        <ion-input placeholder="{{row.date2}}" disabled="disabled"></ion-input>
+      </ion-item>
+    </ion-list>
+    <hr>
+    <div class="middle">
+      <button ion-button (click)="masquer(row.lien,row.dest)">Masquer</button>
+    </div>
+  </ion-card>
+
+</ion-content>

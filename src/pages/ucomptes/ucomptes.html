@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{parameter1}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card >
+    <ion-card-header>
+      Mes notifications
+    </ion-card-header>
+    <hr>
+    <div class="middle">
+      <button ion-button icon-right (click)="goMesnotifications()">
+        Voir
+        <ion-icon name="eye"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+  <ion-card >
+    <ion-card-header>
+      Mes transferts
+    </ion-card-header>
+    <hr>
+    <div class="middle">
+      <button ion-button icon-right (click)="goMestransferts()">
+        Voir
+        <ion-icon name="eye"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

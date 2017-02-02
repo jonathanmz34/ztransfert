@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{parameter1}} - Mes notifications</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mes notifications - {{parameter1}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let row of doub">
+    <ion-card-header>
+
+     {{row.libelle}}
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">Transmis le : </ion-label>
+        <ion-input placeholder="{{row.date}}" disabled="disabled"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Etat : </ion-label>
+        <ion-input placeholder="{{row.etat}}" disabled="disabled"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Observations : </ion-label>
+        <ion-input placeholder="{{row.message}}" disabled="disabled"></ion-input>
+      </ion-item>
+    </ion-list>
+    <hr>
+    <div class="middle">
+    <button ion-button (click)="download(row.lien)">Télécharger</button>
+    </div>
+ </ion-card>
+</ion-content>

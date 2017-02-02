@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ztransfert - Connexion</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header>
+      Identifiez-vous...
+    </ion-card-header>
+
+
+    <ion-list>
+
+      <ion-item >
+        <ion-label floating>Username</ion-label>
+        <ion-input #loginizer [(ngModel)]="login" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <hr>
+    <div class="middle">
+      <button ion-button icon-right (click)="testAcces(login,password)">
+        connexion
+        <ion-icon name="key"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

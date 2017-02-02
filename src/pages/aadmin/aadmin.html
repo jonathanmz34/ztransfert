@@ -1,0 +1,46 @@
+
+<!--<ion-header>
+    <ion-label style="display:inline-block; float:left">Administrateur</ion-label>
+      <button style="display:inline-block; float: right;" ion-button icon-right (click)="HomePage">Home<ion-icon name="home"></ion-icon></button>
+
+</ion-header>-->
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Comptes
+    </ion-card-header>
+
+    <div class="middle">
+      <button ion-button icon-right (click)="aComptesList()" round>
+        Comptes
+        <ion-icon name="key"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Transferts
+    </ion-card-header>
+
+    <div class="middle">
+      <button ion-button icon-right (click)="aTransfertsList()" round>
+        Transferts
+        <ion-icon name="pulse"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Notifications
+    </ion-card-header>
+
+    <div class="middle">
+      <button ion-button icon-right (click)="aNotifsList()" round>
+        Notifications
+        <ion-icon name="bookmark"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

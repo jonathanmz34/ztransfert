@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Compte - {{parameter1}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header >
+      Compte {{parameter1}}
+    </ion-card-header>
+
+
+    <ion-list>
+
+
+      <ion-item>
+        <ion-label floating>Login</ion-label>
+        <ion-input [(ngModel)]="log" type="text" value="{{parameter2}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="pas" type="text" value="{{parameter3}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button icon-right (click)="dossierAcces()">Dossier</button>
+      </ion-item>
+    </ion-list>
+    <hr>
+
+    <div class="middle">
+      <button ion-button icon-right (click)="deleteAcces()">
+        Supprimer
+        <ion-icon name="delete"></ion-icon>
+      </button>
+    </div>
+  </ion-card>
+
+</ion-content>

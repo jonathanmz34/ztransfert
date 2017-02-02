@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ztransfert - Transferts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header >
+      Compte {{parameter1}}
+    </ion-card-header>
+
+
+    <ion-list>
+
+
+      <ion-item>
+        {{parameter1}}
+      </ion-item>
+
+      <ion-item>
+        {{parameter4}}
+      </ion-item>
+      <ion-item>
+      {{parameter3}}
+      </ion-item>
+      <ion-item>
+        <ion-label>Etat</ion-label>
+        <ion-select [(ngModel)]="etat">
+          <ion-option value="Depose" selected="true">Depose</ion-option>
+          <ion-option value="Notification en attente">Notification en attente</ion-option>
+          <ion-option value="Pris en charge">Pris en charge</ion-option>
+          <ion-option value="En cours de traitement">En cours de traitement</ion-option>
+          <ion-option value="traite">traite</ion-option>
+          <ion-option value="termine">termine</ion-option>
+          <ion-option value="Livre">Livre</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        {{parameter5}}
+      </ion-item>
+      <ion-item>
+        <a href="parameter2">
+          {{parameter2}}
+        </a>
+
+      </ion-item>
+
+    </ion-list>
+    <hr>
+
+    <div class="middle">
+      <button ion-button icon-right (click)="EnregTransfet(etat)">
+        Enregistrer
+        <ion-icon name="Enregistrer"></ion-icon>
+      </button><button ion-button icon-right (click)="deleteTransfet()">
+      Supprimer
+      <ion-icon name="delete"></ion-icon>
+    </button>
+    </div>
+  </ion-card>
+
+</ion-content>
